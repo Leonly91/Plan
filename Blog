@@ -1,2 +1,3 @@
 - [] 定时自动部署本地hexo blog到远端仓库（使用Travis CI ）
 - [] 创建CNAME
+- [] 博客标题的favicon
