@@ -1,4 +1,4 @@
-- [] 定时自动部署本地hexo blog到远端仓库（使用Travis CI ）
+- [] 定时自动部署本地hexo blog到远端仓库（使用Travis CI ）http://blog.zhaochunqi.com/2015/11/27/travis-ci-deploy-hexo/
 - [] 创建CNAME
 - [] 博客标题的favicon
 - [] hexo本地图片
