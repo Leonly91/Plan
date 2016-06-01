@@ -1,2 +1,3 @@
 iOS中的图形变换 http://www.samirchen.com/graphic-transform-in-ios/
 Overview of Quartz 2D   https://developer.apple.com/library/ios/documentation/GraphicsImaging/Conceptual/drawingwithquartz2d/dq_overview/dq_overview.html#//apple_ref/doc/uid/TP30001066-CH202-TPXREF131
+ios各种开源库   http://github.ibireme.com/github/list/ios/
