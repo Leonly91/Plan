@@ -1,2 +1,9 @@
 http://www.mzan.com/article/30237558-afnetworking-response-failure-block-is-called-instead-of-success-block.shtml
 AFNetworking源码解读
+
+1. 网络开发
+1.1 NSURLConnection，NSURLRequest
+http://my.oschina.net/u/2340880/blog/618920
+1.2 NSURLSession
+http://my.oschina.net/u/2340880/blog/618888
+http://www.kancloud.cn/digest/data/106703
