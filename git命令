@@ -1,0 +1,98 @@
+克隆远程库到本地： git clone git://example.com/myproject
+
+查看分支：git branch
+
+创建分支：git branch name
+
+切换分支：git checkout name
+
+创建+切换分支：git checkout -b name
+
+合并某分支到当前分支：git merge name
+删除分支：git branch -d name
+
+推送分支到远程仓库的分支中：git push origin  <branch_name>
+
+git clone -b <branch>  origin/<remote_branch_name> 例如： git clone -b 指定的分支名字
+
+/* 或者用下面方法，只clone指定分支到本地，不会clone master*/
+mkdir $BRANCH
+cd $BRANCH
+git init
+git remote add -t $BRANCH -f origin $REMOTE_REPO
+git checkout $BRANCH
+
+源文档 <http://stackoverflow.com/questions/1911109/clone-a-specific-git-branch> 
+
+
+
+git reset HEAD file（== git unstage）可以把暂存区的修改撤销掉，重新放回工作区
+
+git checkout -- file  丢弃工作区的修改
+
+
+git reset --hard HEAD^  file 将文件回退到上一个版本， 上上一个版本就是HEAD^^
+
+Git reset --soft  <shx> 将commit回退到暂存区
+
+git reset --hard 3628164  回退到指定节点
+
+git branch -a  显示服所有分支（包括服务器和本地）
+
+git checkout -b experimental origin/experimental  clone一个分支到本地
+
+gitk --all & 启动可视化工具
+
+git add .  添加所有修改文件到暂存区
+
+git branch -vv   查看本地分支和远程分支的对应关系
+
+git branch -u origin/<branch_name>   将当前分支和远程分支<branch_name>关联
+
+git config --list 查看branch配置
+
+git log -<n>  查看最近n条提交记录 
+
+git rm <filename> 删除文件， 或者使用git add -A
+
+git rebase <branch_name>     //rebase后提交到远程库使用git push -f
+
+git config --global alias.st status 
+
+git stash 将修改暂存不提交
+git stash save "my_stash"  stash保存时添加标签
+git  stash apply 将修改从栈中恢复
+git stash show -p stash@{0}
+git add --patch filename.x (or -p for short): 添加文件的部分修改到暂存区
+
+源文档 <http://stackoverflow.com/questions/1085162/commit-only-part-of-a-file-in-git> 
+
+-------B:修改历史提交记录------
+git rebase --interactive bbc643cd^
+git commit --all --amend --no-edti   //To modify the commit
+git rebase --continue
+-------E:修改历史提交记录-------
+
+git push origin --delete <branchName>  删除远程分支
+
+git push origin :<branchName>    删除远程分支
+
+git remote prune origin
+
+或  git fetch origin --prune   更新本地分支列表，将无效远程分支引用删除
+
+git config --global core.autocrlf false    关闭自动替换换行符
+
+Git 合并分支到mater时冲突解决办法：在分支上做rebase master操作，解决冲突后再push --force推送本地到远程，再让master owner Accept Merge Request.
+
+Git revert <commid-id>    回滚某次提交（回退某次merge时使用-m 选项， git revert -m 1  <commit -id>）
+
+Git mergetool   查看冲突
+
+Git diff --cached  查看暂存区和版本库最后一个版本的差异
+
+Git reflog 查看历史提交记录，包含被reset删除的提交记录
+
+git log --oneline --graph --decorate  图形化打印提交记录
+
+Git cherry-pick commit-hash ： 将其他分支的一个commmit合并到当前分支
